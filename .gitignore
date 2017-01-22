@@ -1,0 +1,12 @@
+# NPM modules
+node_modules
+
+# Mac ddOS X hidden files
+.DS_Store
+
+# Vim swap files
+.*.sw?
+
+# Build Site
+style.css
+style.css.map
