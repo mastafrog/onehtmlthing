@@ -1,0 +1,15 @@
+@import "bootstrap";
+
+.container-fluid, .container {
+    padding-bottom: 40px;
+    border-bottom: 4px pink solid;
+}
+
+.row {
+    border-bottom: 2px blue solid;
+}
+
+#neoeleven, #key-dienstleistungen, #start, #map {
+    background-color: blue;
+    min-height: 500px;
+}
