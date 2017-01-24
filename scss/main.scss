@@ -1,25 +1,55 @@
-@import "bootstrap";
 
+@import "typo";
+@import "mixins";
 
 $lightblue: rgb(127, 200, 236);
-$lightblue: rgb(127, 200, 236);
-
+$darkblue: #0f5490;
+$darkgray: #333;
+$gray: rgb(127, 200, 236);
 
 body {
     font-family: 'Roboto';
 }
 
+
+header {
+    height: 105px;
+    #logo img {
+        margin-top: 15px;
+        width: 136px;
+        height: 136px;
+        position: absolute;
+    }
+
+    .navigation {
+        padding: 0px;
+        background-color: inherit;
+        border-color: inherit;
+        height: 100px;
+        position: relative;
+
+        .nav .navbar-nav {
+            position: absolute;
+            margin: auto;
+            width: 60%;
+        }
+    }
+}
+
 .container-fluid, .container {
 }
 
-
 .row {
-    border-bottom: 2px blue solid;
+    //border-bottom: 2px blue solid;
 }
 
+.no-padding {
+    padding-left: 0px;
+    padding-right: 0px;
+}
 
-#neoeleven, #map {
-    background-color: blue;
+#map {
+    background-color: gray;
     min-height: 400px;
 }
 
@@ -28,7 +58,54 @@ body {
     text-align: center;
 }
 
+
+.button {
+    color: $darkgray;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 10px 18px;
+    background-color: transparent;
+    position: relative;
+    padding-left: 25px;
+    right: 50px;
+    &:hover {
+        text-decoration: none;
+        color: black;
+    }
+}
+
+.blue-button {
+    color: white;
+    background-color: $lightblue;
+    &:hover {
+        background-color: $darkblue;
+        color: white;
+    }
+}
+
+
+
+.arrow-button {
+   &::before {
+        content: "";
+        @include svg-image( 20px, 20px,  url(../imgs/arrow-small.svg));
+        width: 8px;
+        height: 14px;
+        position: absolute;
+        background-size: cover;
+        display: block;
+        margin: auto;
+        left: 10px;
+        top: 12px;
+        fill: white;
+   }
+}
+
+
 #intro {
+    padding: 2em 0em 6em 0em;
+    color: $darkgray;
+
     p {
         max-width: 850px;
         padding-bottom: 33px;
@@ -36,39 +113,9 @@ body {
     }
 }
 
-.button {
-    text-transform: uppercase;
-    text-decoration: none;
-    padding: 7px 18px;
-
-    &:hover {
-        text-decoration: none;
-    }
-}
-
-.button-left-arrow {
-   color: white;
-   background-color: $lightblue;
-
-   &:before {
-        content: " ";
-        background-image: url(../imgs/arrow-small.svg);
-        background-size: cover;
-
-        width: 20px;
-        height: 20px;
-   }
-}
-
-header .logo img {
-    width: 135px;
-    height: 135px;
-    position: absolute;
-}
-
 
 #start {
-    background: url(../imgs/bg-neoeleven-blue-gradient.jpg);
+    background: url(../imgs/bg-keyvisual.jpg);
     background-size: cover;
     .wrap {
         min-height: 560px;
@@ -77,16 +124,53 @@ header .logo img {
         h1 {
             width: 400px;
             height: 100px;
+            font-size: 1.8em;
             position: absolute;
             margin: auto;
-            top: 0; bottom: 0; left: 0; right: 0;
+            color: white;
+            top: 0; bottom: 0; left: 0; right: 25%;
+
+            span {
+                font-size: 1.8em;
+                display: block;
+            }
+        }
+        .button {
+            left: 15px;
+            right: 15px;
         }
     }
 
-    .blue-arrow-button {
-        margin-left: 50px;
+    .blue-button {
+        right: 50px;
+    }
+}
+
+#services {
+    min-height: 510px;
+
+    .half {
+        height: 100%;
+        width: 50%;
+        position: relative;
+    }
+    .left-half {
+        background-color:gray;
     }
 
+    .left, .right {
+        width: 650px;
+        position: absolute;
+        margin: auto;
+    }
+    .left {
+        right:0;
+        color: white;
+    }
+    .right {
+        left:0;
+        background-color:lightgray;
+    }
 }
 
 #key-dienstleistungen {
@@ -94,5 +178,39 @@ header .logo img {
 }
 
 #transformation {
+    .container {
+        min-height: 525px;
+    }
 
+    span {
+        width: 112px;
+        height: 112px;
+    }
+
+    span.strategie {
+        @include svg-image( 112px, 112px,  url(../imgs/pictogram-strategie.svg));
+        background-color: $lightblue;
+
+    }
+
+    span.tech {
+        @include svg-image( 112px, 112px,  url(../imgs/pictogram-technologie.svg));
+        background-color: $lightblue;
+
+    }
+
+    span.transformation {
+        @include svg-image( 112px, 112px,  url(../imgs/pictogram-transormation.svg));
+        background-color: $lightblue;
+
+    }
+    .col-lg-4 {
+        padding: 0 20px;
+    }
+
+}
+
+#neoeleven {
+    background: url(../imgs/bg-neoeleven-blue-gradient.jpg);
+    background-size: cover;
 }

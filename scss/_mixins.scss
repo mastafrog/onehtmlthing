@@ -1,0 +1,9 @@
+
+@mixin svg-image($width, $height, $file) {
+    display: inline-block;
+    background-size: cover;
+    width: $width;
+    height: $height;
+    background: $file;
+    background-repeat: no-repeat;
+}
