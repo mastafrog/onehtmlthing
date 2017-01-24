@@ -200,7 +200,7 @@ header {
     }
 
     span.transformation {
-        @include svg-image( 112px, 112px,  url(../imgs/pictogram-transormation.svg));
+        @include svg-image( 112px, 112px,  url(../imgs/pictogram-transformation.svg));
         background-color: $lightblue;
 
     }
