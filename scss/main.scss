@@ -10,8 +10,6 @@ body {
 }
 
 .container-fluid, .container {
-    padding-bottom: 40px;
-    border-bottom: 4px pink solid;
 }
 
 
@@ -20,9 +18,9 @@ body {
 }
 
 
-#neoeleven, #key-dienstleistungen, #start, #map {
+#neoeleven, #map {
     background-color: blue;
-    min-height: 500px;
+    min-height: 400px;
 }
 
 
@@ -42,7 +40,7 @@ body {
     text-transform: uppercase;
     text-decoration: none;
     padding: 7px 18px;
-    
+
     &:hover {
         text-decoration: none;
     }
@@ -56,26 +54,26 @@ body {
         content: " ";
         background-image: url(../imgs/arrow-small.svg);
         background-size: cover;
-        
+
         width: 20px;
         height: 20px;
    }
-}    
+}
 
 header .logo img {
     width: 135px;
     height: 135px;
     position: absolute;
 }
-    
-    
+
+
 #start {
     background: url(../imgs/bg-neoeleven-blue-gradient.jpg);
     background-size: cover;
     .wrap {
-        min-height: 500px;
+        min-height: 560px;
         position:relative;
-    
+
         h1 {
             width: 400px;
             height: 100px;
@@ -88,7 +86,7 @@ header .logo img {
     .blue-arrow-button {
         margin-left: 50px;
     }
-    
+
 }
 
 #key-dienstleistungen {
@@ -96,5 +94,5 @@ header .logo img {
 }
 
 #transformation {
-    
+
 }
