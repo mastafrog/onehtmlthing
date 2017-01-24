@@ -1,15 +1,100 @@
 @import "bootstrap";
 
+
+$lightblue: rgb(127, 200, 236);
+$lightblue: rgb(127, 200, 236);
+
+
+body {
+    font-family: 'Roboto';
+}
+
 .container-fluid, .container {
     padding-bottom: 40px;
     border-bottom: 4px pink solid;
 }
 
+
 .row {
     border-bottom: 2px blue solid;
 }
 
+
 #neoeleven, #key-dienstleistungen, #start, #map {
     background-color: blue;
     min-height: 500px;
+}
+
+
+.align-center {
+    text-align: center;
+}
+
+#intro {
+    p {
+        max-width: 850px;
+        padding-bottom: 33px;
+        margin: auto;
+    }
+}
+
+.button {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 7px 18px;
+    
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.button-left-arrow {
+   color: white;
+   background-color: $lightblue;
+
+   &:before {
+        content: " ";
+        background-image: url(../imgs/arrow-small.svg);
+        background-size: cover;
+        
+        width: 20px;
+        height: 20px;
+   }
+}    
+
+header .logo img {
+    width: 135px;
+    height: 135px;
+    position: absolute;
+}
+    
+    
+#start {
+    background: url(../imgs/bg-neoeleven-blue-gradient.jpg);
+    background-size: cover;
+    .wrap {
+        min-height: 500px;
+        position:relative;
+    
+        h1 {
+            width: 400px;
+            height: 100px;
+            position: absolute;
+            margin: auto;
+            top: 0; bottom: 0; left: 0; right: 0;
+        }
+    }
+
+    .blue-arrow-button {
+        margin-left: 50px;
+    }
+    
+}
+
+#key-dienstleistungen {
+    background: url(../imgs/bg-stock-neurons.jpg);
+}
+
+#transformation {
+    
 }
